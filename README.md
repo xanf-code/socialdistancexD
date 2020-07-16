@@ -2,16 +2,6 @@
 
 A new Flutter application.
 
-## Getting Started
+## How it works
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# covid19contact
+There’s two practical ways of detecting if two people are nearby with an app: GPS location data and Bluetooth. GPS data requires lots of storage and mapping to detect who’s been near who. Coordinates and times must be tracked, which isn’t the easiest to do, and not very power-efficient. Bluetooth is the better option. Bluetooth has an option called Bluetooth Low Energy (BLE). It’s probably the best option, but I didn’t dedicate enough of my time to use it. I’m not even sure if the APIs are available — it could be what Apple and Google are making. But how does Bluetooth track who’s nearby? Bluetooth only works over short distances. It’s varies a lot based on device, but probably can detect devices from about twenty feet away. Of course, this isn’t ideal, as the CDC recommends six feet of distances as a precaution. As far as I know, it’s challenging to determine the distance between two devices with Bluetooth. The only indicator is signal strength, which can vary based on device type and the environment one is in, so I decided to ignore that. The data of who is near is sent to a server which stores everything in a database. Then, when someone reports a COVID-19 diagnosis, people in the database receive notification of the diagnosis and how long ago they were diagnosed. To summarize in a sentence, the nearby devices from one’s phone is sent to a server, and when they are notified upon one of the devices reporting a positive diagnosis.
