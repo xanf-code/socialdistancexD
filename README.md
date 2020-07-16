@@ -1,6 +1,6 @@
 # covid19contact
 
-A new Flutter application.
+Built using Bluetooth architecture and endpoint APIs
 
 ## How it works
 
